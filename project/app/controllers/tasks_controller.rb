@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  http_basic_authenticate_with name: "admin", password: "secret"
+  # admin:secret@localhost:3000
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   # GET /tasks
